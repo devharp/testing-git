@@ -1,0 +1,39 @@
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .card-text {
+    margin-top: 10px;
+  }
+  
+  .card-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #337ab7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 15px;
+  }
+  h3,p{
+    font-family: "Trirong", serif;
+  }
+  
+  
