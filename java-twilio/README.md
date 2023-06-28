@@ -20,7 +20,7 @@ To run this application, you need to have the following:
 #### 2. Navigate to the project directory:
 
    ```shell
-   cd my-app
+   cd testing-git\java-twilio
    ```
 
 #### 3. Update AUTH_TOKEN
