@@ -1,0 +1,9 @@
+<form [formGroup]="todoForm" (ngSubmit)="onAddTask()">
+    <input type="text" placeholder="Enter a task" formControlName="task">
+    <button type="submit" [disabled]="!todoForm.valid">Add Task</button>
+</form>
+<ul>
+    <li *ngFor="let todo of appService.todos">
+        <input type="checkbox" [checked]="todo['completed']"> {{ todo['task'] }}
+    </li>
+</ul>
