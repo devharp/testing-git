@@ -2,6 +2,7 @@ package com.imageuploader;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
@@ -34,5 +35,17 @@ public class ImageUploader {
   public String uploadImage(File imageFile) throws IOException {
     Map<?, ?> uploadResult = cloudinary.uploader().upload(imageFile, ObjectUtils.emptyMap());
     return (String) uploadResult.get("secure_url");
+  }
+
+  /**
+   * Uploads multiple image files to Cloudinary and returns the secure URLs of the uploaded images.
+   *
+   * @param imageFiles The list of image files to upload.
+   * @return The list of secure URLs of the uploaded images.
+   * @throws IOException If an error occurs during the upload process.
+   */
+  public List<String> uploadImages(List<File> imageFiles) throws IOException {
+    Map<?, ?> uploadResult = cloudinary.uploader().upload(imageFiles, ObjectUtils.emptyMap());
+    return (List<String>) uploadResult.get("secure_url");
   }
 }
